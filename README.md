@@ -1,9 +1,13 @@
 
-# Welcome to your CDK Python project!
+# CDK Lambda Sample
 
-This is a blank project for Python development with CDK.
+## Pre-reqs
 
-The `cdk.json` file tells the CDK Toolkit how to execute your app.
+Make sure you've got awscli and you've configured your credentials.
+
+https://docs.aws.amazon.com/cli/latest/userguide/install-cliv2.html
+
+## Install and Deploy
 
 Install pipenv if you've not got it.
 
@@ -16,10 +20,17 @@ Install dependencies.
 ```
 $ pipenv install
 ```
+
 At this point you can now synthesize the CloudFormation template for this code.
 
 ```
 $ pipenv run cdk synth
+```
+
+or deploy to your account 
+
+```
+$ pipenv run cdk bootstrap && pipenv run cdk deploy
 ```
 
 To add additional dependencies, for example other CDK libraries, just add
