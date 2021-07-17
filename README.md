@@ -33,10 +33,6 @@ or deploy to your account
 $ pipenv run cdk bootstrap && pipenv run cdk deploy
 ```
 
-To add additional dependencies, for example other CDK libraries, just add
-them to your `setup.py` file and rerun the `pip install -r requirements.txt`
-command.
-
 ## Useful commands
 
  * `pipenv run cdk ls`          list all stacks in the app
