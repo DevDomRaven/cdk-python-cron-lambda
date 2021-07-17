@@ -1,0 +1,17 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+lambda-deploy = {editable = true, file = "file:///Users/dominic/Documents/dev/cdk/lambda-deploy"}
+"aws-cdk.core" = "*"
+"aws-cdk.aws-lambda" = "*"
+"aws-cdk.aws_lambda_python" = "*"
+"aws-cdk.aws_events" = "*"
+"aws-cdk.aws_events_targets" = "*"
+
+[dev-packages]
+
+[requires]
+python_version = "3.9"
