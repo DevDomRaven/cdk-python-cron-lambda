@@ -18,7 +18,7 @@ class LambdaDeployStack(cdk.Stack):
         function = PythonFunction(self, "MyFunction",
             entry="./lambda_deploy/functions/", # required
             handler="handler", # optional, defaults to 'handler'
-            runtime=lambda_.Runtime.PYTHON_3_6
+            runtime=lambda_.Runtime.PYTHON_3_8
         )
         lambda_target = LambdaFunction(function)
 
