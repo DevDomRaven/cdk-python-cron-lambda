@@ -9,15 +9,15 @@ import aws_cdk.aws_lambda as lambda_
 from aws_cdk.aws_lambda_python import PythonFunction
 from aws_cdk.aws_events import Rule, Schedule
 from aws_cdk.aws_events_targets import LambdaFunction
+from os import environ
 
 class LambdaDeployStack(cdk.Stack):
 
     def __init__(self, scope: cdk.Construct, construct_id: str, **kwargs) -> None:
         super().__init__(scope, construct_id, **kwargs)
 
-        function = PythonFunction(self, "MyFunction",
-            entry="./lambda_deploy/functions/", # required
-            handler="handler", # optional, defaults to 'handler'
+        function = PythonFunction(self, f"{environ['UNIQUE_NAME']}-function",
+            entry="./lambda_deploy/functions/",
             runtime=lambda_.Runtime.PYTHON_3_8
         )
         lambda_target = LambdaFunction(function)

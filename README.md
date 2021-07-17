@@ -7,6 +7,12 @@ Make sure you've got awscli and you've configured your credentials.
 
 https://docs.aws.amazon.com/cli/latest/userguide/install-cliv2.html
 
+Edit the .env file and change the unique name to follow what ever you're using the lambda for.
+
+```
+UNIQUE_NAME=<Name of lambda>
+```
+
 ## Install and Deploy
 
 Install pipenv if you've not got it.
